@@ -6,7 +6,7 @@ function App() {
       <header className="App-header">
         <img alt="logo" />
         <p>
-          Saptarshi <code>src/App.js</code> and save to hmmm.
+          Krish <code>src/App.js</code> and save to hmmm.
         </p>
         <a
           className="App-link"
