@@ -6,7 +6,7 @@ function App() {
       <header className="App-header">
         <img alt="logo" />
         <p>
-          Hello <code>src/App.js</code> and save to hmmm.
+          SParsh <code>src/App.js</code> and save to hmmm.
         </p>
         <a
           className="App-link"
