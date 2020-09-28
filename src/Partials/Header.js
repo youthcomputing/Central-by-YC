@@ -17,7 +17,7 @@ function App() {
         variant="dark"
       >
         <Navbar.Brand href="#home">
-          <img src="/logo.svg" width="30" height="30" alt="Central by YC" />
+          <img src="yclogo.png" width="30" height="30" alt="Central by YC" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -36,9 +36,9 @@ function App() {
           <Nav className="mr-auto"></Nav>
 
           {/* Right algined items */}
-          <Nav>
+          <Nav className="fontLato">
             <Nav.Link href="#Home">Home</Nav.Link>
-            <Nav.Link href="#Profile">Profile</Nav.Link>
+            <Nav.Link  href="#Profile">Profile</Nav.Link>
             <Nav.Link href="#Storee">Store</Nav.Link>
             <Nav.Link href="#Icon">Icon</Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">

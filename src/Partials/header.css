@@ -9,3 +9,14 @@
   position: absolute;
   height: 38px;
 }
+
+.fontLato {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+
+  letter-spacing: -0.015em;
+
+  color: #ffffff;
+}
