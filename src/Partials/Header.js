@@ -7,6 +7,6 @@ function Header() {
             </div>
         </nav>
     )
-}position: absolute;
+}
 
 export default Header;
