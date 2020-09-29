@@ -38,7 +38,7 @@ function App() {
           {/* Right algined items */}
           <Nav className="fontLato">
             <Nav.Link href="#Home">Home</Nav.Link>
-            <Nav.Link  href="#Profile">Profile</Nav.Link>
+            <Nav.Link href="#Profile">Profile</Nav.Link>
             <Nav.Link href="#Storee">Store</Nav.Link>
             <Nav.Link href="#Icon">Icon</Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
@@ -59,5 +59,4 @@ function App() {
   );
 }
 
-export default Header;
 export default App;
