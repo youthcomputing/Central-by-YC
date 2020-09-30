@@ -35,7 +35,7 @@ function App() {
         {/* This is the search bar */}
 
 
-        {/* Responsive nav bar ?? */}
+        {/* Responsive nav bar */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
 
