@@ -6,8 +6,8 @@
 }
 
 .searchBar {
-  position: absolute;
-  height: 38px;
+ 
+  padding-bottom: 5 ;
 }
 
 .fontLato {
@@ -22,6 +22,6 @@
 }
 
 .navItems {
-  margin-top: 5px;
+  margin-top: 5;
 }
 
