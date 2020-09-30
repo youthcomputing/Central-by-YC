@@ -1,10 +1,11 @@
 import React from "react";
 import "./header.css";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 function App() {
   return (
@@ -37,21 +38,23 @@ function App() {
 
           {/* Right algined items */}
           <Nav className="fontLato">
-            <Nav.Link href="#Home">Home</Nav.Link>
-            <Nav.Link href="#Profile">Profile</Nav.Link>
-            <Nav.Link href="#Storee">Store</Nav.Link>
-            <Nav.Link href="#Icon">Icon</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Lol</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            
+            <Nav.Link className="navItems"  href="#Profile">Home</Nav.Link>
+            <Nav.Link className="navItems"  href="#Profile">Profile</Nav.Link>
+            <Nav.Link className="navItems" href="#Store">Store</Nav.Link>
+            <Nav.Link href="#Icon">
+              
+                <DropdownButton id="dropdown-item-button" alignRight title={<img width="30" height="30" src="Profile Icon.png" alt="">
+              
+              </img>}>
+                  <Dropdown.ItemText>Account</Dropdown.ItemText>
+                  
+                  <Dropdown.Item>Logout</Dropdown.Item>
+                </DropdownButton>
+              </Nav.Link>
+
+            {/* This is the dropdown menu */}
+            
           </Nav>
         </Navbar.Collapse>
       </Navbar>
