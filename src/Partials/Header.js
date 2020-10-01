@@ -6,6 +6,7 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { FormLabel } from "@material-ui/core";
 
 function App() {
   return (
@@ -25,9 +26,10 @@ function App() {
         {/* This is the search bar */}  
         <Nav>
            <Form className="searchBar " inline align>
+             
              <FormControl
                type="text"
-               placeholder="Search"
+               placeholder="Search..."
                className=" mr-sm-2"
              />
            </Form>

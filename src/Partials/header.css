@@ -7,6 +7,15 @@
 
 .searchBar {
   padding-bottom: 5 ;
+
+}
+ .form-control {
+border-radius: 0;
+}
+
+.mr-sm-2{
+  
+  min-width:   463px;
 }
 
 .fontLato {
@@ -22,5 +31,6 @@
 
 .navItems {
   margin-top: 5;
+  margin-right: 10px;
 }
 
