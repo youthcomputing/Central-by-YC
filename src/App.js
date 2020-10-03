@@ -6,7 +6,7 @@ import Header from "./Partials/Header";
 
 
 import Login from "./Authentication/Login";
-import selectUser from "./Partials/selectUser"
+import selectUser from "./Partials/selectUser";
 import * as ROUTES from "./Constants/Routes";
 
 function App() {

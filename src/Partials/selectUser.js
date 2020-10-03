@@ -1,5 +1,17 @@
-const selectUser = () => {
-  return "hello there";
-};
+import React from "react";
+import "./selectUser.css";
 
-export default selectUser;
+
+
+function App() {
+  return (
+    <div className="role">
+      <text>Select Your Role</text>
+
+    </div>
+  
+  
+  );
+}
+
+export default App;

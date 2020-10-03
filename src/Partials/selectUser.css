@@ -1,0 +1,21 @@
+.role{
+    
+  position: absolute;
+  width: 662px;
+  height: 39px;
+  left: 458px;
+  top: 143px;
+  
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 46px;
+  /* or 91% */
+  
+  text-align: center;
+  letter-spacing: -0.015em;
+  text-decoration-line: underline;
+  
+  color: #000000;
+  }
