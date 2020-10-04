@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route } from "react-router-dom";
@@ -24,4 +22,3 @@ function App() {
 }
 
 export default App;
->>>>>>> c5bec96824c6f8c29e675473904da41f4026d2bb
