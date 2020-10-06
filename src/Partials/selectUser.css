@@ -22,7 +22,7 @@
 
 .boxleft{ 
 position: absolute;
-width: 390px;
+width: 420px;
 height: 143px;
 left: 300px;
 top: 268px;
@@ -33,7 +33,7 @@ border-radius: 10px;
  }
  .outisdeboxleft {
   position: absolute;
-  width: 390px;
+  width: 420px;
   height: 390px;
   left: 300px;
   top: 268px;
@@ -176,14 +176,14 @@ top: 305px;
 
   }
 
-  .left{/* Left side rectangle */
+  .outsideboxright{/* Left side rectangle */
 
 
     position: absolute;
     width: 432px;
     height: 381px;
     left: 785px;
-    top: 279.67px;
+    top: 276.67px;
     
     background: #ecebeb;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -210,3 +210,35 @@ letter-spacing: 0.025em;
 
 color: #000000;
     }
+
+.attendee{
+      margin: 13px;
+      overflow-wrap: break-word;
+      color: white;
+      background: #1458EA;
+      border-radius: 7px !important;
+    
+  position : relative;
+  width: 391px;
+  height: 43px;
+  left: 297px;
+  top: 516px; /*up*/
+
+  font-size:19px;
+}
+
+.attendee1{
+  margin: 13px;
+  overflow-wrap: break-word;
+  color: white;
+  background: #1458EA;
+  border-radius: 7px !important;
+
+position : relative;
+width: 391px;
+height: 43px;
+left: 375px;
+top: 516px; /*up*/
+
+font-size:19px;
+}
