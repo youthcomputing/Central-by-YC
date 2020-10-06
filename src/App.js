@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <Header />
-      
       <Route exact path={ROUTES.HOME} />
       <Route path={ROUTES.LOGIN} component={Login} />
     </Router>

@@ -31,6 +31,7 @@ function App() {
                type="text"
                placeholder="Search..."
                className=" mr-sm-2"
+               
              />
            </Form>
         </Nav>
