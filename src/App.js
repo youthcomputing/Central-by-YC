@@ -2,12 +2,12 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route } from "react-router-dom";
 
-import Header from "./Partials/Header";
+import Header from "./Components/Partials/Header";
 
-import Login from "./Authentication/Login";
-import selectUser from "./Authentication/selectUser";
+import Login from "./Components/Authentication/Login";
+import selectUser from "./Components/Authentication/selectUser";
 import * as ROUTES from "./Constants/Routes";
-import Signup from "./Authentication/Signup";
+import Signup from "./Components/Authentication/Signup";
 
 function App() {
   return (

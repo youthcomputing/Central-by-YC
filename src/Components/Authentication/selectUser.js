@@ -1,7 +1,6 @@
 import React from "react";
 import "./selectUser.css";
 import Button from "react-bootstrap/Button";
-import * as ROUTES from "../Constants/Routes";
 import Card from "react-bootstrap/Card";
 
 function User(props) {

@@ -6,9 +6,9 @@ import Form from "react-bootstrap/Form";
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import { withRouter } from "react-router-dom";
 
-import { FirebaseContext } from "../Contexts/FirebaseContext";
+import { FirebaseContext } from "../../Contexts/FirebaseContext";
 
-import * as ROUTES from "../Constants/Routes";
+import * as ROUTES from "../../Constants/Routes";
 
 const Login = (props) => {
   const { auth, persistence, provider } = useContext(FirebaseContext);
