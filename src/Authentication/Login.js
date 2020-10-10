@@ -69,7 +69,12 @@ const Login = () => {
           <Form>
             <Form.Group controlId="formLogin">
               <Button variant="link">Login</Button>
-              <Button variant="link">Signup</Button>
+              <Button
+                variant="link"
+                onClick={() => props.history.push(ROUTES.selectUser)}
+              >
+                Signup
+              </Button>
             </Form.Group>
             <br></br>
             <Form.Group controlId="formBasicEmail">
@@ -124,6 +129,7 @@ const Login = () => {
           )}
         </Card.Body>
       </Card>
+      );
     </div>
   );
 };

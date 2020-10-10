@@ -22,7 +22,7 @@
 
 .boxleft{ 
 position: absolute;
-width: 432px;
+width: 420px;
 height: 143px;
 left: 300px;
 top: 268px;
@@ -33,8 +33,8 @@ border-radius: 10px;
  }
  .outisdeboxleft {
   position: absolute;
-  width: 432px;
-  height: 425px;
+  width: 420px;
+  height: 390px;
   left: 300px;
   top: 268px;
   
@@ -50,8 +50,8 @@ border-radius: 10px;
 position: absolute;
 width: 76px;
 height: 76px;
-left: 605px;
-top: 299px;
+left: 575px;
+top: 311px;
 
 border-radius: 10px;
 }
@@ -62,7 +62,7 @@ border-radius: 10px;
 position: absolute;
 width: 197px;
 height: 46px;
-left: 377px;
+left: 357px;
 top: 315px;
 
 font-family: Lato;
@@ -83,12 +83,12 @@ color: #000000;
   width: 380px;
   height: 188px;
   left: 330px;
-  top: 420px;
+  top: 440px;
   
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 27px;
   /* or 112% */
   
@@ -172,18 +172,18 @@ position: absolute;
 width: 76px;
 height: 76px;
 left: 1100px;
-top: 299px;
+top: 305px;
 
   }
 
-  .left{/* Left side rectangle */
+  .outsideboxright{/* Left side rectangle */
 
 
     position: absolute;
     width: 432px;
-    height: 413.33px;
+    height: 381px;
     left: 785px;
-    top: 279.67px;
+    top: 276.67px;
     
     background: #ecebeb;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -195,12 +195,12 @@ position: absolute;
 width: 391px;
 height: 183px;
 left: 810px;
-top: 427px;
+top: 420px;
 
 font-family: Lato;
 font-style: normal;
 font-weight: normal;
-font-size: 24px;
+font-size: 20px;
 line-height: 27px;
 /* or 112% */
 
@@ -210,3 +210,35 @@ letter-spacing: 0.025em;
 
 color: #000000;
     }
+
+.attendee{
+      margin: 13px;
+      overflow-wrap: break-word;
+      color: white;
+      background: #1458EA;
+      border-radius: 7px !important;
+    
+  position : relative;
+  width: 390px;
+  height: 43px;
+  left: 300px;
+  top: 516px; /*up*/
+
+  font-size:19px;
+}
+
+.attendee1{
+  margin: 13px;
+  overflow-wrap: break-word;
+  color: white;
+  background: #1458EA;
+  border-radius: 7px !important;
+
+position : relative;
+width: 391px;
+height: 43px;
+left: 375px;
+top: 516px; /*up*/
+
+font-size:19px;
+}

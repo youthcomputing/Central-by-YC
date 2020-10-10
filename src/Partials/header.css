@@ -6,16 +6,14 @@
 }
 
 .searchBar {
-  padding-bottom: 5 ;
-
-}
- .form-control {
-border-radius: 0;
+  padding-bottom: 5;
 }
 
-.mr-sm-2{
-  
-  min-width:   463px;
+.form-control {
+  border-radius: 0;
+}
+.mr-sm-2 {
+  min-width: 280px;
 }
 
 .fontLato {
@@ -33,4 +31,3 @@ border-radius: 0;
   margin-top: 5;
   margin-right: 10px;
 }
-
