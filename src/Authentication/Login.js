@@ -40,18 +40,22 @@ const Login = () => {
     event.preventDefault();
     if (isValid()) {
       _setLoading(true);
-      auth.setPersistence(persistence.SESSION).then(() =>
-        auth
-          .signInWithEmailAndPassword(email, password)
-          .then((authUser) => {
-            console.log("Logged in successfully!");
-            updateErrorMessage("");
-          })
-          .catch((error) => {
-            updateErrorMessage(error.message);
-            _setLoading(false);
-          })
-      );
+      auth
+        .setPersistence(persistence.SESSION)
+        .then(() =>
+          auth
+            .signInWithEmailAndPassword(email, password)
+            .then((authUser) => {
+              console.log("Logged in successfully!");
+              updateErrorMessage("");
+            })
+            .catch((error) => {
+              updateErrorMessage(error.message);
+            })
+        )
+        .then(() => {
+          _setLoading(false);
+        });
     } else {
       if (email === "") updateErrorMessage("Email cannot be blank!");
       else updateErrorMessage("Password cannot be blank!");
@@ -91,7 +95,13 @@ const Login = () => {
             </Form.Group>
             <Form.Group>
               <br></br>
-              <Button variant="primary" type="submit" onClick={onSubmit} block>
+              <Button
+                variant="primary"
+                type="submit"
+                onClick={onSubmit}
+                disabled={loading}
+                block
+              >
                 LOGIN
               </Button>
               <br></br>
