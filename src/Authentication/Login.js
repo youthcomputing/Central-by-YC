@@ -4,7 +4,9 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
-const Login = () => {
+import User from "./selectUser";
+import * as ROUTES from "../Constants/Routes";
+const Login = (props) => {
   return (
     <div>
       <Card className="login" style={{ width: "38rem" }}>
@@ -12,7 +14,12 @@ const Login = () => {
           <Form>
             <Form.Group controlId="formLogin">
               <Button variant="link">Login</Button>
-              <Button variant="link">Signup</Button>
+              <Button
+                variant="link"
+                onClick={() => props.history.push(ROUTES.selectUser)}
+              >
+                Signup
+              </Button>
             </Form.Group>
             <br></br>
             <Form.Group controlId="formBasicEmail">
@@ -54,6 +61,7 @@ const Login = () => {
           </Card.Text>
         </Card.Body>
       </Card>
+      );
     </div>
   );
 };

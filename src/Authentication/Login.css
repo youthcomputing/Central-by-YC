@@ -1,63 +1,74 @@
 .login {
-    
-    margin-bottom: 10px;
-    text-align: center;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%; 
-    height: 100%; 
-    box-shadow: 0 12px 12px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    padding: 30px
-  }
-
-.btn-primary{    
-    overflow-wrap: break-word;
-    color: white;
-    background: 1458EA;
-    border-radius: 7px !important;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  padding: 30px;
 }
 
-.btn-link{    
-    overflow-wrap: break-word;
-    color: #1458EA;
-    border-radius: 7px !important;
-    font-size: 18px;
-    font-weight: bold;
+.btn-primary {
+  overflow-wrap: break-word;
+  color: white;
+  background: 1458ea;
+  border-radius: 7px !important;
 }
 
-.btn-danger{
-    margin: 13px;
-    overflow-wrap: break-word;
-    color: white;
-    background: #DE5246;
-    border: #DE5246;;
-    border-radius: 7px !important;
-}
-.btn-secondary{
-    margin: 13px;
-    overflow-wrap: break-word;
-    color: white;
-    background: #3B5998;
-    border-radius: 7px !important;
+.btn-link {
+  overflow-wrap: break-word;
+  color: #1458ea;
+  border-radius: 7px !important;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.text-grey{
-    color: grey;
-    font-size: 11px;
+.btn-danger {
+  margin: 13px;
+  overflow-wrap: break-word;
+  color: white;
+  background: #de5246;
+  border: #de5246;
+  border-radius: 7px !important;
+}
+.btn-secondary {
+  margin: 13px;
+  overflow-wrap: break-word;
+  color: white;
+  background: #3b5998;
+  border-radius: 7px !important;
 }
 
-.text-blue{
-    color: #1458EA;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: left  !important;
-    display:block;
+.text-grey {
+  color: grey;
+  font-size: 11px;
 }
 
-.inputText{
-    border-radius: 7px !important;
+.text-blue {
+  color: #1458ea;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left !important;
+  display: block;
+}
+
+.inputText {
+  border-radius: 7px !important;
+}
+
+.signupInput {
+  margin: 5px;
+}
+
+.signupTitle {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 46px;
 }

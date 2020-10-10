@@ -39,13 +39,13 @@ function App() {
 
           {/* Right algined items */}
           <Nav variant="pills" className="fontLato">
-            <Nav.Link className="navItems " href="#Home">
+            <Nav.Link className="navItems " href="/">
               Home
             </Nav.Link>
-            <Nav.Link className="navItems" href="#Profile">
-              Profile
+            <Nav.Link className="navItems" href="/login">
+              Login
             </Nav.Link>
-            <Nav.Link className="navItems" href="#Store">
+            <Nav.Link className="navItems" href="Store">
               Store
             </Nav.Link>
           </Nav>
