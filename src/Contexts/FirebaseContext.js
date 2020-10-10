@@ -2,14 +2,18 @@ import { createContext } from "react";
 import firebase from "firebase/app";
 import "firebase/auth";
 
-import * as KEYS from "../Constants/Keys";
+import * as CONFIG from "../Constants/Config";
 
 const firebaseAuthConfig = {
-  apiKey: KEYS.FIREBASE_AUTH_API_KEY,
+  apiKey: CONFIG.FIREBASE_AUTH_API_KEY,
+  authDomain: CONFIG.FIREBASE_AUTH_DOMAIN,
+  databaseURL: CONFIG.FIREBASE_DATABASE_URL,
+  projectId: CONFIG.FIREBASE_PROJECT_ID,
 };
 
 firebase.initializeApp(firebaseAuthConfig);
 const auth = firebase.auth();
 const persistence = firebase.auth.Auth.Persistence;
+const provider = new firebase.auth.GoogleAuthProvider();
 
-export const FirebaseContext = createContext({ auth, persistence });
+export const FirebaseContext = createContext({ auth, persistence, provider });

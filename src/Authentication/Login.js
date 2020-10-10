@@ -11,7 +11,7 @@ import { FirebaseContext } from "../Contexts/FirebaseContext";
 import * as ROUTES from "../Constants/Routes";
 
 const Login = (props) => {
-  const { auth, persistence } = useContext(FirebaseContext);
+  const { auth, persistence, provider } = useContext(FirebaseContext);
 
   const [showPassword, _setShowPassword] = useState(false);
   const _toggleShowPassword = () => {
@@ -46,7 +46,7 @@ const Login = (props) => {
           auth
             .signInWithEmailAndPassword(email, password)
             .then((authUser) => {
-              console.log("Logged in successfully!");
+              console.log("Successfully logged in!");
               updateErrorMessage("");
             })
             .catch((error) => {
@@ -60,6 +60,21 @@ const Login = (props) => {
       if (email === "") updateErrorMessage("Email cannot be blank!");
       else updateErrorMessage("Password cannot be blank!");
     }
+  };
+
+  const onSubmitGoogle = (event) => {
+    event.preventDefault();
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        _setErrorMessage("");
+        _setLoading(false);
+        console.log("Successfully logged in with Google!");
+      })
+      .catch((error) => {
+        _setErrorMessage(error.message);
+        _setLoading(false);
+      });
   };
 
   return (
@@ -111,7 +126,12 @@ const Login = (props) => {
               </Button>
               <br></br>
               <hr></hr>
-              <Button variant="danger" type="submit">
+              <Button
+                variant="danger"
+                type="submit"
+                onClick={onSubmitGoogle}
+                disabled={loading}
+              >
                 <FaGoogle /> Continue with Google{" "}
               </Button>
               <Button variant="secondary" type="submit">

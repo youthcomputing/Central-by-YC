@@ -11,7 +11,7 @@ import { FirebaseContext } from "../Contexts/FirebaseContext";
 import * as ROUTES from "../Constants/Routes";
 
 const Signup = (props) => {
-  const { auth } = useContext(FirebaseContext);
+  const { auth, provider } = useContext(FirebaseContext);
 
   const [showPassword, _setShowPassword] = useState(false);
   const [showConfirm, _setShowConfirm] = useState(false);
@@ -69,6 +69,21 @@ const Signup = (props) => {
       else if (password === "")
         _setErrorMessage("Password cannot be left blank!");
     }
+  };
+
+  const onSubmitGoogle = (event) => {
+    event.preventDefault();
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        _setErrorMessage("");
+        _setLoading(false);
+        console.log(result.user);
+      })
+      .catch((error) => {
+        _setErrorMessage(error.message);
+        _setLoading(false);
+      });
   };
 
   /* const isAttendee = props.location.state.attendee; */
@@ -142,7 +157,12 @@ const Signup = (props) => {
               </Button>
               <br></br>
               <hr></hr>
-              <Button variant="danger" type="submit">
+              <Button
+                variant="danger"
+                type="submit"
+                onClick={onSubmitGoogle}
+                disabled={loading}
+              >
                 <FaGoogle /> Continue with Google{" "}
               </Button>
               <Button variant="secondary" type="submit">
