@@ -1,12 +1,77 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Login.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
+import { withRouter } from "react-router-dom";
+
+import { FirebaseContext } from "../Contexts/FirebaseContext";
+
 import * as ROUTES from "../Constants/Routes";
+
 const Signup = (props) => {
-  const isAttendee = props.location.state.attendee;
+  const { auth } = useContext(FirebaseContext);
+
+  const [showPassword, _setShowPassword] = useState(false);
+  const [showConfirm, _setShowConfirm] = useState(false);
+  const _toggleShowPassword = () => {
+    _setShowPassword(!showPassword);
+  };
+  const _toggleShowConfirm = () => {
+    _setShowConfirm(!showConfirm);
+  };
+
+  const [firstName, _setFirstName] = useState("");
+  const [lastName, _setLastName] = useState("");
+  const [username, _setUsername] = useState("");
+  const [email, _setEmail] = useState("");
+  const [password, _setPassword] = useState("");
+  const [confirm, _setConfirm] = useState("");
+
+  const [errorMessage, _setErrorMessage] = useState(null);
+  const [loading, _setLoading] = useState(false);
+
+  const isValid = () => {
+    return (
+      password === confirm &&
+      firstName !== "" &&
+      lastName !== "" &&
+      username !== "" &&
+      email !== "" &&
+      password !== ""
+    );
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (isValid()) {
+      _setLoading(true);
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          _setErrorMessage("");
+          _setLoading(false);
+        })
+        .catch((error) => {
+          _setErrorMessage(error.message);
+          _setLoading(false);
+        });
+    } else {
+      if (password !== confirm) _setErrorMessage("Passwords do not match!");
+      else if (firstName === "")
+        _setErrorMessage("First name cannot be left blank!");
+      else if (lastName === "")
+        _setErrorMessage("Last name cannot be left blank!");
+      else if (username === "")
+        _setErrorMessage("Username cannot be left blank!");
+      else if (email === "") _setErrorMessage("Email cannot be left blank!");
+      else if (password === "")
+        _setErrorMessage("Password cannot be left blank!");
+    }
+  };
+
+  /* const isAttendee = props.location.state.attendee; */
   return (
     <div>
       <Card className="login" style={{ width: "38rem" }}>
@@ -18,11 +83,15 @@ const Signup = (props) => {
               <Form.Control
                 type="firstname"
                 placeholder="First Name"
+                value={firstName}
+                onChange={(event) => _setFirstName(event.target.value)}
                 className="inputText col-sm signupInput"
               />
               <Form.Control
                 type="lastname"
                 placeholder="Last Name"
+                value={lastName}
+                onChange={(event) => _setLastName(event.target.value)}
                 className="inputText col-sm signupInput"
               />
             </div>
@@ -30,6 +99,8 @@ const Signup = (props) => {
               <Form.Control
                 type="email"
                 placeholder="Email"
+                value={email}
+                onChange={(event) => _setEmail(event.target.value)}
                 className="inputText col-sm signupInput"
               />
             </div>
@@ -37,11 +108,15 @@ const Signup = (props) => {
               <Form.Control
                 type="username"
                 placeholder="Username"
+                value={username}
+                onChange={(event) => _setUsername(event.target.value)}
                 className="inputText col-sm signupInput"
               />
               <Form.Control
                 type="password"
                 placeholder="Password"
+                value={password}
+                onChange={(event) => _setPassword(event.target.value)}
                 className="inputText col-sm signupInput"
               />
             </div>
@@ -49,12 +124,20 @@ const Signup = (props) => {
               <Form.Control
                 type="password"
                 placeholder="Confirm Password"
+                value={confirm}
+                onChange={(event) => _setConfirm(event.target.value)}
                 className="inputText col-sm signupInput"
               />
             </div>
             <Form.Group>
               <br></br>
-              <Button variant="primary" type="submit" block>
+              <Button
+                variant="primary"
+                type="submit"
+                onClick={onSubmit}
+                disabled={loading}
+                block
+              >
                 Next
               </Button>
               <br></br>
@@ -72,6 +155,9 @@ const Signup = (props) => {
             acknowledge that you have read, understood, and agree to Central's
             Privacy Policy and Terms and Conditions
           </Card.Text>
+          {errorMessage && (
+            <div className="error-message">Error: {errorMessage}</div>
+          )}
         </Card.Body>
       </Card>
       );
