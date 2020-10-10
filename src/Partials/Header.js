@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Navbar className="hello" expand="sm" variant="dark">
         {/* This is the logo in the NavBar */}
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img src="yclogo.png" width="30" height="30" alt="Central by YC" />
         </Navbar.Brand>
         {/* This is the logo in the NavBar */}
