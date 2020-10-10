@@ -10,7 +10,7 @@ import { FirebaseContext } from "../Contexts/FirebaseContext";
 
 import * as ROUTES from "../Constants/Routes";
 
-const Login = () => {
+const Login = (props) => {
   const { auth, persistence } = useContext(FirebaseContext);
 
   const [showPassword, _setShowPassword] = useState(false);
