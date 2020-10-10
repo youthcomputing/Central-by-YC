@@ -52,6 +52,7 @@ const Signup = (props) => {
         .then(() => {
           _setErrorMessage("");
           _setLoading(false);
+          props.history.push(ROUTES.HOME);
         })
         .catch((error) => {
           _setErrorMessage(error.message);

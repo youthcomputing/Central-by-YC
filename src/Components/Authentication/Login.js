@@ -48,6 +48,7 @@ const Login = (props) => {
             .then((authUser) => {
               console.log("Successfully logged in!");
               updateErrorMessage("");
+              props.history.push(ROUTES.HOME);
             })
             .catch((error) => {
               updateErrorMessage(error.message);
