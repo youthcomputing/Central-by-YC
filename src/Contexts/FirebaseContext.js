@@ -14,6 +14,12 @@ const firebaseAuthConfig = {
 firebase.initializeApp(firebaseAuthConfig);
 const auth = firebase.auth();
 const persistence = firebase.auth.Auth.Persistence;
-const provider = new firebase.auth.GoogleAuthProvider();
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+const facebookProvider = new firebase.auth.FacebookAuthProvider();
 
-export const FirebaseContext = createContext({ auth, persistence, provider });
+export const FirebaseContext = createContext({
+  auth,
+  persistence,
+  googleProvider,
+  facebookProvider,
+});
