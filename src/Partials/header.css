@@ -13,7 +13,7 @@
   border-radius: 0;
 }
 .mr-sm-2 {
-  min-width: 280px;
+  min-width: auto;
 }
 
 .fontLato {
@@ -28,6 +28,12 @@
 }
 
 .navItems {
-  margin-top: 5;
-  margin-right: 10px;
+  margin-top: auto;
+  margin-right: auto;
+}
+
+.input-group.md-form.form-sm.form-1 input {
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }

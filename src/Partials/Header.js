@@ -6,6 +6,10 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
+import * as ROUTES from "../Constants/Routes";
+import { withRouter } from "react-router-dom";
+
+
 
 function App() {
   return (
@@ -29,6 +33,17 @@ function App() {
         </Nav>
         {/* This is the search bar */}
 
+    {/* <MDBCol>
+      <div className="input-group md-form form-sm form-1 pl-0">
+        <div className="input-group-prepend">
+          <span className="input-group-text purple lighten-3" id="basic-text1">
+            <MDBIcon className="text-white" icon="search" />
+          </span>
+        </div>
+        <input className="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" />
+      </div>
+    </MDBCol> */}
+
         {/* Responsive nav bar */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -38,23 +53,24 @@ function App() {
           {/* Spacing between search bar and nav links*/}
 
           {/* Right algined items */}
-          <Nav variant="pills" className="fontLato">
-            <Nav.Link className="navItems " href="/">
-              Home
-            </Nav.Link>
-            <Nav.Link className="navItems" href="/login">
+          <Nav  className="fontLato " variant="pills" defaultActiveKey="/">
+            <Nav.Link className="navItems " >Home</Nav.Link>
+            <Nav.Link className="navItems " href="#">
               Login
             </Nav.Link>
-            <Nav.Link className="navItems" href="Store">
+            <Nav.Link className="navItems" href="#2">
               Store
             </Nav.Link>
           </Nav>
           <Nav>
+
+
+            
             {/* This is the dropdown menu */}
             <Nav.Link href="#Icon">
               <DropdownButton
                 id="dropdown-item-button"
-                alignRight
+                alignLeft
                 title={
                   <img
                     width="30"
