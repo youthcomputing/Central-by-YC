@@ -1,4 +1,4 @@
-.hello {
+.Box {
   width: 100%;
 
   background: linear-gradient(90deg, #003ec4 0%, #1458ea 100%);
@@ -13,7 +13,7 @@
   border-radius: 0;
 }
 .mr-sm-2 {
-  min-width: auto;
+  min-width: 300px;
 }
 
 .fontLato {
@@ -30,10 +30,10 @@
 .navItems {
   margin-top: auto;
   margin-right: auto;
+  margin: 10px;
+  color: #ffffff;
 }
 
-.input-group.md-form.form-sm.form-1 input {
-  border: 1px solid #bdbdbd;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+.navItems:hover {
+  color: aliceblue;
 }

@@ -6,15 +6,18 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
-import * as ROUTES from "../Constants/Routes";
-import { withRouter } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+
+
+
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar className="hello" expand="sm" variant="dark">
+      <Navbar collapseOnSelect className="Box" expand="lg" variant="dark">
         {/* This is the logo in the NavBar */}
         <Navbar.Brand href="/">
           <img src="yclogo.png" width="30" height="30" alt="Central by YC" />
@@ -27,22 +30,13 @@ function App() {
             <FormControl
               type="text"
               placeholder="Search..."
-              className="mr-sm-2"
+              className="mr-sm-2 "
             />
           </Form>
         </Nav>
         {/* This is the search bar */}
 
-    {/* <MDBCol>
-      <div className="input-group md-form form-sm form-1 pl-0">
-        <div className="input-group-prepend">
-          <span className="input-group-text purple lighten-3" id="basic-text1">
-            <MDBIcon className="text-white" icon="search" />
-          </span>
-        </div>
-        <input className="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" />
-      </div>
-    </MDBCol> */}
+    
 
         {/* Responsive nav bar */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -53,14 +47,14 @@ function App() {
           {/* Spacing between search bar and nav links*/}
 
           {/* Right algined items */}
-          <Nav  className="fontLato " variant="pills" defaultActiveKey="/">
-            <Nav.Link className="navItems " >Home</Nav.Link>
-            <Nav.Link className="navItems " href="#">
+          <Nav  className="fontLato "  >
+            <NavLink className="navItems" activeClassName="active" to="/"  >Home</NavLink>
+            <NavLink className="navItems " activeClassName="active" to="/login" >
               Login
-            </Nav.Link>
-            <Nav.Link className="navItems" href="#2">
+            </NavLink>
+            <NavLink className="navItems" activeClassName="active" to="/selectUser" >
               Store
-            </Nav.Link>
+            </NavLink>
           </Nav>
           <Nav>
 
