@@ -25,12 +25,58 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
+.header1{
+  position: absolute;
+width: 432px;
+height: 143px;
+left: 374px;
+top: 270px;
+
+background: #F5F5F5;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+}
 .outsidebox {
-  height: 40rem;
-  margin: 2rem;
-  background: #ecebeb;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-top: 75px;
+  font-size: 20px;
+  margin-left: 65px;
+  margin-right: 65px;
+ 
+  align-items: center;
+  background-color:#F5F5F5;
+ 
+  height: 150%;
+  padding: 40px;
+}
+
+
+
+.box{
+  margin-bottom: 10px;
+  text-align: left;
+  margin-top: 75px;
+  font-size: 20px;
+  margin-left: 65px;
+  margin-right: 65px;
+ 
+  align-items: center;
+  background-color:#F5F5F5;
+ 
+  height: 150%;
+  padding: 30px;
+
+}
+
+
+.Next{margin: 3px;
+  overflow-wrap: break-word;
+  color: white;
+  background: #1458ea;
+  border-radius: 7px;
+  width: 275px;
+  height:40px;
 }
 
 /* People icon */
@@ -111,7 +157,6 @@
   border-color: #1458ea;
 }
 .boxxx {
-  position: absolute;
   width: 432px;
   height: 143px;
   left: 785px;
