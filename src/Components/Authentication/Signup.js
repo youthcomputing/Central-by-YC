@@ -11,7 +11,9 @@ import { FirebaseContext } from "../../Contexts/FirebaseContext";
 import * as ROUTES from "../../Constants/Routes";
 
 const Signup = (props) => {
-  const { auth, provider } = useContext(FirebaseContext);
+  const { auth, googleProvider, facebookProvider } = useContext(
+    FirebaseContext
+  );
 
   const [showPassword, _setShowPassword] = useState(false);
   const [showConfirm, _setShowConfirm] = useState(false);
@@ -72,14 +74,14 @@ const Signup = (props) => {
     }
   };
 
-  const onSubmitGoogle = (event) => {
+  const onSubmitOther = (event, provider) => {
     event.preventDefault();
     auth
       .signInWithPopup(provider)
       .then((result) => {
         _setErrorMessage("");
         _setLoading(false);
-        console.log(result.user);
+        props.history.push(ROUTES.HOME);
       })
       .catch((error) => {
         _setErrorMessage(error.message);
@@ -161,12 +163,17 @@ const Signup = (props) => {
               <Button
                 variant="danger"
                 type="submit"
-                onClick={onSubmitGoogle}
+                onClick={(event) => onSubmitOther(event, googleProvider)}
                 disabled={loading}
               >
                 <FaGoogle /> Continue with Google{" "}
               </Button>
-              <Button variant="secondary" type="submit">
+              <Button
+                variant="secondary"
+                type="submit"
+                onClick={(event) => onSubmitOther(event, facebookProvider)}
+                disabled={loading}
+              >
                 <FaFacebookF /> Continue with Facebook{" "}
               </Button>
             </Form.Group>
@@ -186,4 +193,4 @@ const Signup = (props) => {
   );
 };
 
-export default Signup;
+export default withRouter(Signup);

@@ -11,7 +11,9 @@ import { FirebaseContext } from "../../Contexts/FirebaseContext";
 import * as ROUTES from "../../Constants/Routes";
 
 const Login = (props) => {
-  const { auth, persistence, provider } = useContext(FirebaseContext);
+  const { auth, persistence, googleProvider, facebookProvider } = useContext(
+    FirebaseContext
+  );
 
   const [showPassword, _setShowPassword] = useState(false);
   const _toggleShowPassword = () => {
@@ -22,8 +24,6 @@ const Login = (props) => {
   const [password, _setPassword] = useState("");
 
   const [forgotPasswordOpen, _setForgotPasswordOpen] = useState(false);
-
-  const [signupHover, _setSignupHover] = useState(false);
 
   const [errorMessage, _setErrorMessage] = useState(null);
   const updateErrorMessage = (message) => {
@@ -63,14 +63,14 @@ const Login = (props) => {
     }
   };
 
-  const onSubmitGoogle = (event) => {
+  const onSubmitOther = (event, provider) => {
     event.preventDefault();
     auth
       .signInWithPopup(provider)
       .then((result) => {
         _setErrorMessage("");
         _setLoading(false);
-        console.log("Successfully logged in with Google!");
+        props.history.push(ROUTES.HOME);
       })
       .catch((error) => {
         _setErrorMessage(error.message);
@@ -130,12 +130,17 @@ const Login = (props) => {
               <Button
                 variant="danger"
                 type="submit"
-                onClick={onSubmitGoogle}
+                onClick={(event) => onSubmitOther(event, googleProvider)}
                 disabled={loading}
               >
                 <FaGoogle /> Continue with Google{" "}
               </Button>
-              <Button variant="secondary" type="submit">
+              <Button
+                variant="secondary"
+                type="submit"
+                onClick={(event) => onSubmitOther(event, facebookProvider)}
+                disabled={loading}
+              >
                 <FaFacebookF /> Continue with Facebook{" "}
               </Button>
             </Form.Group>
