@@ -13,7 +13,7 @@
   border-radius: 0;
 }
 .mr-sm-2 {
-  min-width: 300px;
+  min-width: 280px;
 }
 
 .fontLato {
@@ -37,3 +37,5 @@
 .navItems:hover {
   color: aliceblue;
 }
+
+/* This is the start of new navBar */
