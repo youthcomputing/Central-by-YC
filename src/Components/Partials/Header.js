@@ -10,6 +10,7 @@ import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
 import * as ROUTES from "../../Constants/Routes";
 import { withRouter } from 'react-router-dom'
+import { PlayCircleFilledWhite } from "@material-ui/icons";
 
 
 const App = (props) => {
@@ -51,6 +52,7 @@ const App = (props) => {
             <Button
                 variant="link"
                 onClick={() => props.history.push(ROUTES.HOME)}
+                className="text-white"
               >
                 Home
               </Button>
@@ -58,6 +60,7 @@ const App = (props) => {
            <Button
                 variant="link"
                 onClick={() => props.history.push(ROUTES.LOGIN)}
+                className="text-white "
               >
                 Login
               </Button>
@@ -65,6 +68,7 @@ const App = (props) => {
               <Button
                 variant="link"
                 onClick={() => props.history.push(ROUTES.HOME)}
+                className="text-white"
               >
                 Store
               </Button>
