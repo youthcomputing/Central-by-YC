@@ -84,9 +84,9 @@ const Login = (props) => {
         <Card.Body>
           <Form>
             <Form.Group controlId="formLogin">
-              <Button variant="link">Login</Button>
+              <Button variant="primary mr-sm-5">Login</Button>
               <Button
-                variant="link"
+                variant="primary mr-sm-2"
                 onClick={() => props.history.push(ROUTES.selectUser)}
               >
                 Signup
