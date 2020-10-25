@@ -80,7 +80,7 @@ const Login = (props) => {
 
   return (
     <div>
-      <Card className="login" style={{ position: "relative" }}>
+      <Card className="login" style={{ "position":"relative", "width": "100%", "maxWidth" : "300px" }}>
         <Card.Body>
           <Form>
             <Form.Group controlId="formLogin">
