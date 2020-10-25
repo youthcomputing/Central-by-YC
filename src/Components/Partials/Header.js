@@ -7,13 +7,17 @@ import FormControl from "react-bootstrap/FormControl";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 import { NavLink } from 'react-router-dom';
-// import Button from 'react-bootstrap/Button';
-// import NavDropdown from 'react-bootstrap/NavDropdown'
+import Button from 'react-bootstrap/Button'
+import * as ROUTES from "../../Constants/Routes";
+import { withRouter } from 'react-router-dom'
 
 
+const App = (props) => {
 
-function App() {
+  
   return (
+    
+    
       <Navbar   className="color container-fluid" expand="lg" variant="dark">
         {/* This is the logo in the NavBar */}
         <Navbar.Brand href="/">
@@ -30,6 +34,7 @@ function App() {
               className="mr-sm-2 "
             />
           </Form>
+          
        
         {/* This is the search bar */}
         
@@ -39,10 +44,30 @@ function App() {
           <Nav className=" mr-auto "></Nav>
             {/* Spacing between search bar and nav links*/}
             {/* Right algined items */}
+      
+            
+
             <Nav>
-            <NavLink className="navItems fontLato" activeClassName="active" to="/"  >Home</NavLink>
-            <NavLink className="navItems fontLato " activeClassName="active" to="/login">Login</NavLink>
-            <NavLink className="navItems fontLato" activeClassName="active" to="/selectUser">Store</NavLink>
+            <Button
+                variant="link"
+                onClick={() => props.history.push(ROUTES.HOME)}
+              >
+                Home
+              </Button>
+
+           <Button
+                variant="link"
+                onClick={() => props.history.push(ROUTES.LOGIN)}
+              >
+                Login
+              </Button>
+
+              <Button
+                variant="link"
+                onClick={() => props.history.push(ROUTES.HOME)}
+              >
+                Store
+              </Button>
 
             {/* This is the dropdown menu */}
             <DropdownButton
@@ -67,31 +92,8 @@ function App() {
 
 
 
-//new nav bar
 
-
-//     <Navbar className="color" expand="lg">
-//   <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-//   <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//   <Navbar.Collapse id="basic-navbar-nav">
-//     <Nav className="mr-auto">
-//       <Nav.Link href="#home">Home</Nav.Link>
-//       <Nav.Link href="#link">Link</Nav.Link>
-//       <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-//         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-//         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-//         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-//         <NavDropdown.Divider />
-//         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-//       </NavDropdown>
-//     </Nav>
-//     <Form inline>
-//       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-//       <Button variant="outline-success">Search</Button>
-//     </Form>
-//   </Navbar.Collapse>
-// </Navbar>
   );
 }
 
-export default App;
+export default withRouter(App);

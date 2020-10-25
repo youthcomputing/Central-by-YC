@@ -1,8 +1,8 @@
 .color {
   width: 100%;
+  position: relative;
 
   background: linear-gradient(90deg, #003ec4 0%, #1458ea 100%);
- 
 }
 
 .searchBar {
@@ -13,7 +13,7 @@
   border-radius: 0;
 }
 .mr-sm-2 {
-  min-width: 280px;
+  position: relative;
 }
 
 .fontLato {
