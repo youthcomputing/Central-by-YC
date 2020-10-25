@@ -8,7 +8,7 @@ function User(props) {
   return (
     <React.Fragment  >
      
-      <h1 className="role">Select Your Role</h1>
+      <h1 className="role ">Select Your Role</h1>
       <div class="row h-75 align-middle" style={{ "position":"relative", "width": "100%",  }}>
         <Card className="outsidebox col-sm" style={{ "position":"relative", "width": "100%",  }} >
           <h1>Attendee</h1>
