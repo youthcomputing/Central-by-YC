@@ -26,7 +26,7 @@ const App = (props) => {
 
         {/* This is the search bar */}
         
-          <Form className="searchBar " inline style={{ "position":"relative", "width": "20%", "maxWidth" : "677px" }}>
+          <Form className="searchBar " inline style={{ "position":"relative", "width": "50%", "maxWidth" : "677px" }}>
             <FormControl
               type="text"
               placeholder="Search..."
