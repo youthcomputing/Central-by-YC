@@ -6,11 +6,9 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
-import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
 import * as ROUTES from "../../Constants/Routes";
 import { withRouter } from 'react-router-dom'
-import { PlayCircleFilledWhite } from "@material-ui/icons";
 
 
 const App = (props) => {
@@ -19,7 +17,7 @@ const App = (props) => {
   return (
     
     
-      <Navbar   className="color container-fluid" expand="lg" variant="dark">
+      <Navbar   className="color container-fluid" expand="xl" variant="dark">
         {/* This is the logo in the NavBar */}
         <Navbar.Brand href="/">
           <img src="yclogo.png" width="30" height="30" alt="Central by YC" />
@@ -28,7 +26,7 @@ const App = (props) => {
 
         {/* This is the search bar */}
         
-          <Form className="searchBar " inline >
+          <Form className="searchBar " inline style={{ "position":"relative", "width": "20%", "maxWidth" : "677px" }}>
             <FormControl
               type="text"
               placeholder="Search..."
@@ -76,7 +74,8 @@ const App = (props) => {
             {/* This is the dropdown menu */}
             <DropdownButton
             id="dropdown-item-button"
-            alignRight
+            
+            
             title={
               <img
                 width="30"

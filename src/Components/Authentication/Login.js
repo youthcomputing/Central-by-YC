@@ -80,16 +80,16 @@ const Login = (props) => {
 
   return (
     <div>
-      <Card className="login" style={{ "position":"relative", "width": "100%", "maxWidth" : "300px" }}>
+      <Card className="login" style={{ "position":"relative", "width": "100%", "maxWidth" : "677px" }}>
         <Card.Body>
           <Form>
             <Form.Group controlId="formLogin">
-              <Button variant="primary mr-sm-5">Login</Button>
+              <Button variant="link mr-sm-5">Login</Button>
               <Button
-                variant="primary mr-sm-2"
+                variant="link mr-sm-2"
                 onClick={() => props.history.push(ROUTES.selectUser)}
               >
-                Signup
+                Sign Up
               </Button>
             </Form.Group>
             <br></br>
@@ -148,14 +148,13 @@ const Login = (props) => {
           <Card.Text className="text-grey">
             By clicking "Continue with Google/Facebook/Login" above, you
             acknowledge that you have read, understood, and agree to Central's
-            Privacy Policy and Terms and Conditions
+            Privacy Policy and Terms and Conditions.
           </Card.Text>
           {errorMessage && (
             <div className="error-message">Error: {errorMessage}</div>
           )}
         </Card.Body>
       </Card>
-      );
     </div>
   );
 };
