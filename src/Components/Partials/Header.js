@@ -19,8 +19,10 @@ const App = (props) => {
     
       <Navbar   className="color container-fluid" expand="xl" variant="dark">
         {/* This is the logo in the NavBar */}
-        <Navbar.Brand href="/">
-          <img src="yclogo.png" width="30" height="30" alt="Central by YC" />
+
+        
+        <Navbar.Brand >
+        <a src="bobo.svg"width="50" height="50px" ></a >
         </Navbar.Brand>
         {/* This is the logo in the NavBar */}
 

@@ -36,3 +36,7 @@
 }
 
 /* This is the start of new navBar */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}

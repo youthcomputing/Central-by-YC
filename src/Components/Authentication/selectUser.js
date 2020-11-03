@@ -14,7 +14,6 @@ function User(props) {
           <h1>Attendee</h1>
          
             <img src="imagei.png" width="50" height="50" alt="attendee-user-card-logo" />
-
           <p>
             • Attend events posted by organizers <br></br>
             <br></br>• Earn virtual currency to win prizes <br></br>
